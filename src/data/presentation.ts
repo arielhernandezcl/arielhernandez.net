@@ -19,10 +19,6 @@ const presentation: Presentation = {
     "Soy un desarrolador fullstack que me especializo en distintas tecnologias",
   socials: [
     {
-      label: "X",
-      link: "https://twitter.com/itsstormzz_",
-    },
-    {
       label: "Linkedin",
       link: "https://www.linkedin.com/in/arielhernandezcl/",
     },
