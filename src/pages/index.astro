@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import RecentPublications from "../components/RecentPublications.astro";
@@ -20,21 +21,7 @@ import RecentPublications from "../components/RecentPublications.astro";
           ¡Bienvenidos a mi rincón digital! Aquí comparto mis experiencias de vida y profesionales, explorando juntos el fascinante mundo de la tecnología y la innovación.
         </p>
       </div>
-      <div class="w-full flex flex-col items-center gap-2.5 px-4 lg:px-0 mt-6">
-        <img
-          src="https://images.unsplash.com/photo-1707684379133-982daa6d87b2"
-          alt="Isla De Pascual, Chile"
-        />
-        <p class="italic text-xs text-gray-600 dark:text-neutral-400">
-          Foto de <a
-            href="https://unsplash.com/es/@arielhernandez?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Ariel Hernandez</a
-          > en <a
-            href="https://unsplash.com/es/fotos/zIgrsOr9HgQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          >
-        </p>
-      </div>
+      <Hero />
 	  <RecentPublications />
 	      </main>
     <Footer />
