@@ -1,3 +1,81 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Code } from 'lucide-react';
+import Service from '../components/react/Service.jsx';
+import Loader from '../components/react/Loader.jsx';
+
+const services = [
+  {
+    title: "Desarrollo Web",
+    description: "Creación de sitios web modernos y responsivos utilizando las últimas tecnologías.",
+    icon: Code,
+    additionalInfo: "En este servicio, nos enfocamos en desarrollar sitios web que no solo sean visualmente atractivos, sino también funcionales y optimizados para diversos dispositivos y navegadores."
+  },
+  {
+    title: "Desarrollo de APIs",
+    description: "Creación y mantenimiento de APIs escalables y seguras para integraciones entre sistemas y aplicaciones móviles.",
+    icon: Code,
+    additionalInfo: "Desarrollamos APIs que permiten a tus aplicaciones interactuar de manera eficiente y segura, facilitando la integración con otros sistemas y servicios."
+  },
+  {
+    title: "Arquitectura de Microservicios",
+    description: "Diseño y desarrollo de aplicaciones basadas en microservicios para facilitar el escalamiento y la flexibilidad del sistema.",
+    icon: Code,
+    additionalInfo: "Implementamos una arquitectura de microservicios que permite una escalabilidad horizontal eficiente y una mejor gestión de las aplicaciones complejas."
+  },
+  {
+    title: "Automatización de Procesos",
+    description: "Desarrollo de scripts y herramientas para la automatización de tareas repetitivas y la optimización del flujo de trabajo en servidores.",
+    icon: Code,
+    additionalInfo: "Automatizamos tareas repetitivas para mejorar la eficiencia y reducir el riesgo de errores humanos en tus procesos."
+  },
+  {
+    title: "Seguridad en Aplicaciones Web",
+    description: "Implementación de prácticas de seguridad avanzadas para proteger las aplicaciones contra amenazas como SQL Injection y Cross-Site Scripting.",
+    icon: Code,
+    additionalInfo: "Aseguramos que tus aplicaciones web sean seguras contra las amenazas comunes de seguridad, aplicando las mejores prácticas en la industria."
+  },
+  {
+    title: "Implementación de CI/CD",
+    description: "Configuración de pipelines de integración y entrega continua para garantizar despliegues automáticos y eficientes.",
+    icon: Code,
+    additionalInfo: "Configuramos pipelines de CI/CD que automatizan el proceso de despliegue, asegurando una entrega continua y eficiente del software."
+  },
+];
 ---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <BaseHead title={`Mis Servicios | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="w-full max-w-screen-lg mx-auto my-4 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300">
+    <Loader client:load />
+    <Header />
+    <main class="flex-grow">
+      <section class="py-12 bg-gray-100 dark:bg-neutral-800">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl font-bold text-center mb-8">Mis Servicios</h1>
+          <p class="text-center mb-12 max-w-2xl mx-auto">
+            Ofrezco una variedad de servicios para ayudarte a establecer y mejorar tu presencia en línea. 
+            Desde el desarrollo web hasta la automatización de procesos, estoy aquí para ayudarte a alcanzar tus objetivos.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <Service
+                title={service.title}
+                description={service.description}
+                additionalInfo={service.additionalInfo}
+                client:load
+              />
+            ))}                     
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
