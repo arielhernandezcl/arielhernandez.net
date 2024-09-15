@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Button({ text, link }) {
   const handleClick = () => {
     window.location.href = link;
