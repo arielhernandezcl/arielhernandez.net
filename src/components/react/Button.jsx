@@ -10,15 +10,15 @@ export default function Button({ text, link }) {
         rounded-xl 
         font-bold 
         text-white 
-        border border-solid border-blue-500
+        border border-solid border-gray-500
         flex justify-center items-center gap-2
         cursor-pointer 
-        bg-blue-500 
-        hover:bg-blue-600
+        bg-gray-500 
+        hover:bg-gray-600
         hover:shadow-lg
-        active:bg-blue-700 active:shadow-inner
+        active:bg-gray-700 active:shadow-inner
         transition-all duration-300 ease-in-out
-        dark:bg-blue-600 dark:hover:bg-blue-700 dark:active:bg-blue-800
+        dark:bg-gray-600 dark:hover:bg-gray-700 dark:active:bg-gray-800
       "
       aria-label={text}
       onClick={handleClick}
