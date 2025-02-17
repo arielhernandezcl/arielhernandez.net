@@ -31,10 +31,10 @@ posts.forEach((post) => {
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="w-full  mx-auto my-4 p-4 sm:p-6 max-w-screen-md dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300">
+  <body class="w-full mx-auto my-4 p-4 sm:p-6 max-w-screen-md dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300">
     <Header />
     <main
-      class="w-full max-w-screen-md mx-auto my-4 flex flex-col gap-4 justify-center"
+      class="w-full max-w-screen-lg mx-auto my-4 flex flex-col gap-4 justify-center"
     >
       {
         Object.keys(postByYear).sort(
